@@ -4,13 +4,13 @@ After=multi-user.target
 
 [Service]
 Type=simple
-User=pi
-Group=pi
+User=maksim
+Group=maksim
 SupplementaryGroups=video input render
-WorkingDirectory=/home/pi/repos/pi-lvgl
+WorkingDirectory=/home/maksim/dev/pi-lvgl
 Environment=LV_LINUX_DRM_CARD=/dev/dri/card1
-Environment=LV_LINUX_EVDEV_POINTER_DEVICE=/dev/input/by-path/platform-fe205000.i2c-event
-ExecStart=/home/pi/repos/pi-lvgl/build/app
+Environment=LV_LINUX_EVDEV_POINTER_DEVICE=/dev/input/event0
+ExecStart=/home/maksim/dev/pi-lvgl/build/app
 Restart=always
 RestartSec=2
 StandardInput=tty-force

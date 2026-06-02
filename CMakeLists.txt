@@ -63,3 +63,14 @@ target_link_libraries(app PRIVATE
   pthread
   rt
 )
+
+target_include_directories(app PRIVATE
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/ui
+)
+
+target_sources(app PRIVATE
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/images.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/screens.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/styles.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/ui.c
+)
